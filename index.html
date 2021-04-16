@@ -15,7 +15,7 @@
 			width: 100px;
 			height: 100px;
 			background-color: pink;
-			transform: translate(-50%,-50%);
+			transform: translate(-50%, -50%);
 		}
 	</style>
 
@@ -32,6 +32,24 @@
 	<button class="btn">
 		点击变颜色
 	</button>
+
+	<script>
+		var btn = document.querySelector('.btn');
+		var block = document.querySelector('address');
+
+		let bgc = btn.style.backgroundColor;
+		let target = true;
+
+		btn.onclick = function () {
+			if(target) {
+				block.style.backgroundColor = 'red';
+				target = false;
+			} else {
+				block.style.backgroundColor = bgc;
+				target = true;
+			}
+		}
+	</script>
 </body>
 
 </html>
