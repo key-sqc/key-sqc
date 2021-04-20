@@ -6,50 +6,339 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 	<style>
-		address {
+		body {
+			color: #2f2f2f;
+			font-size: 16px;
+			line-height: 1.7;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		header {
+			width: 100%;
+			z-index: 9999;
+		}
+
+		header .xb-sticky {
 			position: fixed;
+			display: block;
+			top: 0;
+			width: 100%;
+			height: 50px;
+			opacity: 0.8;
+			background-color: #fff;
+			border-bottom: 1px solid #f1f1f1;
+			padding: 0 15px 5px 15px;
+			z-index: 1;
+		}
+
+		/*  logo */
+		header .xb-sticky .logo {
+			float: left;
+			width: 248px;
+			height: 50px;
+			padding: 0 15px;
+		}
+
+		header .xb-sticky .logo img {
+			width: 46px;
+			height: 36px;
+			padding: 8px 0 10px;
+		}
+
+		/* 列表 */
+		header .xb-button {
+			position: fixed;
+			right: 0;
+			width: 34px;
+			height: 46px;
+			margin-top: 2px;
+			margin-right: 40px;
+			z-index: 800;
+			background-color: transparent;
+			cursor: pointer;
+			border: none;
+		}
+
+		/* 列表详情页面 */
+		header .xb-wrap {
+			position: fixed;
+			width: 300px;
+			height: 100%;
+			right: 0;
+			padding: 2.5em 1.5em 0;
+			background: #2f2f2f;
+			z-index: 1001;
+		}
+
+		header .xb-wrap nav,
+		header .xb-wrap .xb-list {
+			height: 100%;
+			overflow-x: auto;
+		}
+
+		header .xb-wrap nav .xb-list a {
+			position: relative;
+			color: #a5a5a5;
+			display: block;
+			padding: 1.5em 0;
+		}
+
+		header .xb-wrap nav .xb-list a.active span::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
+			z-index: -1;
+		}
+
+		header .xb-wrap nav .xb-list a span {
+			position: absolute;
+			margin-left: 14px;
+			padding: 10px;
+			font-size: 12px;
+			font-weight: 400;
+			letter-spacing: 5px;
+			/* 变为大写 */
+			text-transform: uppercase;
+		}
+
+		header .xb-wrap nav .xb-list a:not(.active) span:hover {
+			color: white;
+		}
+
+		header .xb-wrap .xb-warp-button {
+			position: absolute;
+			width: 1em;
+			height: 1em;
+			right: 1em;
+			top: 1em;
+			border: none;
+			background-color: transparent;
+			color: #ccc;
+			cursor: pointer;
+		}
+
+		/* content-warp */
+		.content-warp {
+			width: 100%;
+			height: 100%;
+		}
+
+		.content {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		#home {
+			display: block;
+			background: url('./images/bg.jpg');
+			width: 100%;
+			height: 100%;
+			min-height: 100%;
+			min-width: 100%;
+			background-size: cover;
+		}
+
+
+		#home .warp-hero-content {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#home .warp-hero-content .hero-content {
+			position: absolute;
+			text-align: center;
+			/* HEAD */
+			/* min-width: 300px; */
+			width: 170px;
+			height: 124px;
 			top: 50%;
 			left: 50%;
-			width: 100px;
-			height: 100px;
-			background-color: pink;
+			background-color: rgba(255, 255, 255, .8);
 			transform: translate(-50%, -50%);
+			padding: 65px;
+			outline: 4px double #fff;
+			outline-offset: 8px;
+		}
+
+		#home .hero-content h1 {
+			line-height: 40px;
+			letter-spacing: 0.6px;
+			margin: 20px 0 10px;
+		}
+
+		#home .typed {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 26px;
+			letter-spacing: 1.5px;
+			margin: 0 auto;
+			opacity: 0.6;
+		}
+
+
+		#home .mouse-icon {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 30px;
+			border: 2px solid #2f2f2f;
+			background-color: #fff;
+			opacity: 0.8;
+			border-radius: 13px;
+			height: 40px;
+			width: 30px;
+			margin: 0 auto;
+			z-index: 100;
+		}
+
+		#home .mouse-icon .croll {
+			position: relative;
+			border-radius: 10px;
+			background-color: #2f2f2f;
+			width: 4px;
+			height: 8px;
+			top: 4px;
+			margin: 0 auto;
+		}
+
+		#about {
+			min-height: 650px;
+			display: inline-block;
+			width: 100%;
+		}
+
+		#about .no-pad {
+			margin: 0;
+			padding: 0;
+			width: 50%;
+		}
+
+		#about .bg-xb {
+			position: relative;
+			min-height: 600px;
+			float: left;
+			background: url('./images/reza.jpg') no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
 		}
 	</style>
-
 </head>
 
 <body>
-	<h1>个人网站</h1>
-	<p>大家好,这是我的个人网站主页</p>
+	<header class="header">
+		<div class="xb-sticky">
+			<!-- LOGO -->
+			<div class="logo">
+				<a href="index.html">
+					<img src="./images/logo.png" alt="logo">
+				</a>
+			</div>
+			<!-- LOGO END -->
+		</div>
+		<!-- 列表详情页面 -->
+		<div class="xb-wrap" style="display: none;">
+			<nav>
+				<div class="xb-list">
+					<a href="#" class="active">
+						<span>lorem</span>
+					</a>
+					<a href="#">
+						<span>Loremipsum</span>
+					</a>
+					<a href="#">
+						<span>Loremipsum</span>
+					</a>
+					<a href="#">
+						<span>Loremipsumdolor</span>
+					</a>
+					<a href="#">
+						<span>Loremipsumdolorsit</span>
+					</a>
+					<a href="#">
+						<span>Loremipsum</span>
+					</a>
+					<a href="#">
+						<span>Loremipsum</span>
+					</a>
+					<a href="#">
+						<span>lorem</span>
+					</a>
+					<a href="#">
+						<span>Loremipsum</span>
+					</a>
+					<a href="#">
+						<span>Loremipsum</span>
+					</a>
+					<a href="#">
+						<span>lorem</span>
+					</a>
+					<a href="#">
+						<span>Loremipsum</span>
+					</a>
+				</div>
+			</nav>
 
-	<address>
+			<button class="fa fa-arrows-alt xb-warp-button">
 
-	</address>
+			</button>
+		</div>
+		<!-- 列表详情页面 END -->
 
-	<button class="btn">
-		点击变颜色
-	</button>
+		<!-- 列表 -->
+		<button class="fa fa-th-list xb-button">
 
-	<script>
-		var btn = document.querySelector('.btn');
-		var block = document.querySelector('address');
+		</button>
+		<!-- 列表 END -->
+	</header>
 
-		let bgc = btn.style.backgroundColor;
-		let target = true;
+	<div class="content-warp">
+		<div class="content">
+			<section id="home">
+				<div class="warp-hero-content">
+					<div class="hero-content">
+						<h1>HELLO</h1>
+						<br>
+						<span class="typed">My name is Xiaobai</span>
+						<span class="typed-cursor">|</span>
+					</div>
+					<div class="mouse-icon">
+						<div class="croll"></div>
+					</div>
+				</div>
+			</section>
 
-		btn.onclick = function () {
-			if(target) {
-				block.style.backgroundColor = 'red';
-				target = false;
-			} else {
-				block.style.backgroundColor = bgc;
-				target = true;
-			}
-		}
-	</script>
+			<section id="about">
+				<div class="no-pad">
+					<div class="bg-xb"></div>
+				</div>
+			</section>
+		</div>
+	</div>
 </body>
 
 </html>
