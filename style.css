@@ -1,10 +1,3 @@
-body {
-    color: #2f2f2f;
-    font-size: 16px;
-    line-height: 1.7;
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-}
 *,
 *::after,
 *::before {
@@ -16,6 +9,25 @@ body::-webkit-scrollbar {
     height: 0;
 }
 
+body,
+html {
+    left: 0;
+    top: 0;
+    margin: 0px;
+    padding: 0px;
+    /* 重要 去除空白 */
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    width: 100%;
+}
+body {
+    color: #2f2f2f;
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: #fff;
+}
+
 .clearfix::after {
     content: "";
     display: table;
@@ -24,6 +36,13 @@ body::-webkit-scrollbar {
     height: 0;
     clear: both;
     *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
 }
 
 ul {
@@ -37,6 +56,35 @@ a {
     color: black;
 }
 
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-md-3 {
+    width: 25%;
+}
+
+.col-md-4 {
+    width: 33.3%;
+}
+
+.col-md-5 {
+    width: 50%;
+}
+
+.col-md-7 {
+    width: 75%;
+}
+
 header {
     width: 100%;
     z-index: 9999;
@@ -46,6 +94,7 @@ header .xb-sticky {
     position: fixed;
     display: block;
     top: 0;
+    left: 0;
     width: 100%;
     height: 50px;
     opacity: 0.8;
@@ -146,7 +195,7 @@ header .xb-wrap .xb-warp-button {
     height: 1em;
     right: 1em;
     top: 1em;
-    border: 0 none;
+    border: 0 noe;
     background-color: transparent;
     color: #ccc;
     cursor: pointer;
@@ -159,9 +208,11 @@ header .xb-wrap .xb-warp-button:focus {
 }
 
 /* content-warp */
-.content-warp {
+.content-warp,
+.content {
     width: 100%;
     height: 100%;
+    background-color: black;
 }
 
 .content {
@@ -172,12 +223,13 @@ header .xb-wrap .xb-warp-button:focus {
 
 #home {
     display: block;
-    background: url("./images/bg.jpg");
+    background: url("./images/bg.jpg") no-repeat;
     width: 100%;
     height: 100%;
-    min-height: 100%;
     min-width: 100%;
+    min-height: 100%;
     background-size: cover;
+    display: block;
 }
 
 #home .warp-hero-content {
@@ -188,7 +240,7 @@ header .xb-wrap .xb-warp-button:focus {
     left: 0;
 }
 
-#home .warp-hero-content .hero-content {
+#home .hero-content {
     position: absolute;
     text-align: center;
     min-width: 300px;
@@ -208,7 +260,7 @@ header .xb-wrap .xb-warp-button:focus {
 }
 
 #home .typed {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 1.5px;
@@ -224,14 +276,15 @@ header .xb-wrap .xb-warp-button:focus {
     border: 2px solid #2f2f2f;
     background-color: #fff;
     opacity: 0.8;
-    border-radius: 13px;
+    border-radius: 14px;
     height: 40px;
     width: 30px;
     margin: 0 auto;
     z-index: 100;
+    display: block;
 }
 
-#home .mouse-icon .croll {
+#home .mouse-icon .scroll {
     position: relative;
     border-radius: 10px;
     background-color: #2f2f2f;
@@ -249,7 +302,6 @@ header .xb-wrap .xb-warp-button:focus {
 }
 
 #about .no-pad {
-    width: 50%;
     float: left;
 }
 
@@ -264,7 +316,6 @@ header .xb-wrap .xb-warp-button:focus {
 }
 
 #about .width-cli {
-    width: 50%;
     float: right;
     min-width: 400px;
 }
@@ -330,27 +381,15 @@ header .xb-wrap .xb-warp-button:focus {
     display: block;
 }
 
-.gray-bg .container {
-    width: 1170px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-.gray-bg .row {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-.gray-bg .row-l {
-    float: left;
-    width: 25%;
+.gray-bg .fl {
     padding: 0 15px;
 }
 
-.gray-bg .row h3 span {
+h3 span {
     position: relative;
 }
 
-.gray-bg .row-l h3 span::after {
+h3 span::after {
     content: "";
     position: absolute;
     left: 0;
@@ -359,7 +398,8 @@ header .xb-wrap .xb-warp-button:focus {
     width: 28px;
     background-color: #dedede;
 }
-.gray-bg .row-l .content-detail {
+
+.content-detail {
     font-weight: 400;
     margin: 70px 0 10px;
     line-height: 30px;
@@ -367,9 +407,7 @@ header .xb-wrap .xb-warp-button:focus {
     letter-spacing: 0.4px;
 }
 
-.row-r {
-    float: right;
-    width: 75%;
+.content-right {
     margin-top: 20px;
     padding: 0 20px 0 60px;
 }
@@ -412,25 +450,25 @@ header .xb-wrap .xb-warp-button:focus {
 }
 
 .row-r .mask-wrap .image-bg {
-	position: relative;
+    position: relative;
     z-index: 1000;
-	top: 50%;
-	left: 50%;
-	width: 100%;
-	height: 100%;
-	background: rgba(255,255,255,0.8);
-	font-size: 14px;
-	transform: translate(-50%,-50%);
-	padding: 10px 0;
-	text-align: center;
-	margin: 0 auto;
-	opacity: 0;
-	color: red;
-	color: transparent;
-	font-weight: 300;
-	transition: opacity 0.5s;
-	letter-spacing: 1.5px;
-	text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    text-align: center;
+    margin: 0 auto;
+    opacity: 0;
+    color: red;
+    color: transparent;
+    font-weight: 300;
+    transition: opacity 0.5s;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .row-r .mask-wrap .desc {
@@ -444,4 +482,45 @@ header .xb-wrap .xb-warp-button:focus {
     color: black;
     font-size: 14px;
     font-weight: 700;
+}
+
+.white-bg {
+    display: block;
+    background-color: #fff;
+    padding: 120px 0;
+}
+
+.icon-use {
+    /* font-family: "Glyphter"; */
+    font-size: 30px;
+    line-height: 20px;
+    color: #818181;
+    margin: 0;
+}
+
+.head-sm {
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 10px 0 20px;
+}
+
+.text-grey {
+    color: #434343;
+    line-height: 26px;
+    margin: 0 0 60px;
+    font-size: 13px;
+}
+
+.xb-services {
+    height: 221px;
+    padding: 0 15px;
+}
+.listing-item {
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
