@@ -1,359 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet"href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"/>
-        <link rel="stylesheet" href="./style.css" />
-    </head>
 
-    <body>
-        <header class="header">
-            <div class="xb-sticky">
-                <!-- LOGO -->
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="./images/logo.png" alt="logo" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="for-sticky">
+            <!-- LOGO -->
+            <div class=" col-md-2 col-md-6 logo">
+                <a href="index.html">
+                    <img src="./images/logo.png" alt="logo" class="logo-nav" />
+                </a>
+            </div>
+            <!-- LOGO END -->
+        </div>
+        <!-- 列表详情页面 -->
+        <div class="menu-wrap" style="display: none;">
+            <nav class="menu">
+                <div class="menu-list">
+                    <a data-scroll href="#home" class="active">
+                        <span>Home</span>
+                    </a>
+                    <a data-scroll href="#about">
+                        <span>About</span>
+                    </a>
+                    <a data-scroll href="#work">
+                        <span>Work</span>
+                    </a>
+                    <a data-scroll href="#services">
+                        <span>Services</span>
+                    </a>
+                    <a data-scroll href="#employement">
+                        <span>Employement</span>
+                    </a>
+                    <a data-scroll href="#skill">
+                        <span>Skills</span>
+                    </a>
+                    <a data-scroll href="#education">
+                        <span>Education</span>
+                    </a>
+                    <a data-scroll href="#testimonial">
+                        <span>Testimonial</span>
+                    </a>
+                    <a data-scroll href="#blog">
+                        <span>Blog</span>
+                    </a>
+                    <a data-scroll href="#contact">
+                        <span>Contact</span>
                     </a>
                 </div>
-                <!-- LOGO END -->
-            </div>
-            <!-- 列表详情页面 -->
-            <div class="xb-wrap" style="display: none">
-                <nav>
-                    <div class="xb-list">
-                        <a href="#" class="active">
-                            <span>lorem</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsum</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsum</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsumdolor</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsumdolorsit</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsum</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsum</span>
-                        </a>
-                        <a href="#">
-                            <span>lorem</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsum</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsum</span>
-                        </a>
-                        <a href="#">
-                            <span>lorem</span>
-                        </a>
-                        <a href="#">
-                            <span>Loremipsum</span>
-                        </a>
-                    </div>
-                </nav>
+            </nav>
 
-                <button class="fa fa-arrows-alt xb-warp-button"></button>
-            </div>
-            <!-- 列表详情页面 END -->
+            <button class="close-button" id="close-button">
+                Close Menu
+            </button>
+        </div>
+        <!-- 列表详情页面 END -->
 
-            <!-- 列表 -->
-            <button class="fa fa-th-list xb-button"></button>
-            <!-- 列表 END -->
-        </header>
+        <!-- 列表 -->
+        <button class="menu-button" id="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <!-- 列表 END -->
+    </header>
 
-        <div class="content-warp">
-            <div class="content">
-                <section id="home">
-                    <div class="container">
-                        <div class="row">
-                            <div class="warp-hero-content col-md-5">
-                                <div class="hero-content">
-                                    <h1>HELLO</h1>
-                                    <br />
-                                    <span class="typed"
-                                        >My name is Xiaobai</span
-                                    >
-                                    <span class="typed-cursor">|</span>
-                                </div>
-                            </div>
-                            <div class="mouse-icon col-md-5">
-                                <div class="scroll"></div>
+    <div class="content-warp">
+        <div class="content">
+            <!-- HOME -->
+            <section id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="warp-hero-content">
+                            <div class="hero-content">
+                                <h1>HELLO</h1>
+                                <br />
+                                <span class="typed">My name is Xiaobai</span>
+                                <span class="typed-cursor">|</span>
                             </div>
                         </div>
+                        <div class="mouse-icon">
+                            <div class="scroll"></div>
+                        </div>
                     </div>
-                </section>
+                </div>
+            </section>
+            <!-- HOME  END-->
 
-                <section id="about">
-                    <div class="no-pad col-md-5">
-                        <div class="bg-xb"></div>
-                    </div>
-                    <div class="width-cli col-md-5">
-                        <div class="row">
+            <!-- ABOUT -->
+            <section id="about">
+                <div class="col-md-6 col-xs-12 no-pad">
+                    <div class="bg-about"></div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 white-col">
+                    <div class="row">
+                        <div class="owl-carousel2 owl-carousel owl-theme" style="opacity: 1; display: block;">
                             <div class="owl-wrapper-outer">
-                                <div class="wrap-about">
-                                    <div class="w-content">
-                                        <p>
-                                            Design is the method of putting form
-                                            and content together. Design, just
-                                            as art, has multiple definitions
-                                            there is no single definition.
-                                            Design can be art. Design can be
-                                            aesthetics. Design is so simple,
-                                            that's why it is so complicated.
-                                        </p>
-                                        <h5>M maza</h5>
-                                        <img
-                                            src="./images/signature.png"
-                                            alt="我的签名"
-                                        />
+                                <div class="owl-wrapper">
+                                    <div class="owl-item" style="width: 678px">
+                                        <div class="col-md-12">
+                                            <div class="wrap-about">
+                                                <div class="w-content">
+                                                    <p class="head-about">
+                                                        Design is the method of putting form
+                                                        and content together. Design, just
+                                                        as art, has multiple definitions
+                                                        there is no single definition.
+                                                        Design can be art. Design can be
+                                                        aesthetics. Design is so simple,
+                                                        that's why it is so complicated.
+                                                    </p>
+                                                    <h5 class="name">M maza</h5>
+                                                    <img src="./images/signature.png" alt="我的签名" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="clickble">
-                                <div class="owl-page active"></div>
-                                <div class="owl-page"></div>
+                            <div class="owl-controls clickable">
+                                <div class="owl-pagination">
+                                    <div class="owl-page active">
+                                        <span class=""></span>
+                                    </div>
+                                    <div class="owl-page">
+                                        <span class=""></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
+            <!-- ABOUT END -->
 
-                <section id="work" class="gray-bg">
-                    <div class="container">
-                        <div class="row clearfix">
-                            <div class="fl col-md-3">
-                                <h3 class="title-smail">
-                                    <span>Work</span>
-                                </h3>
-                                <p class="content-detail">
-                                    Ut wisi enim ad minim veniam, quis nostrud
-                                    exerci tation ullamcorper suscipit lobortis
-                                    nisl ut aliquip ex ea commodo consequat.
-                                    <br />
-                                    <br />
-                                    Duis autem vel eum iriure dolor in hendrerit
-                                    in vulputate velit esse molestie consequat,
-                                    vel illum dolore eu feugiat nulla facilisis
-                                    at vero eros.
-                                </p>
-                            </div>
-                            <div
-                                class="fr row-r col-md-7 clearfix content-right"
-                            >
-                                <ul class="portfolio-image">
-                                    <li>
-                                        <a href="">
-                                            <img
-                                                src="./images/bw-1.png"
-                                                alt=""
-                                            />
-                                            <div class="mask-wrap">
-                                                <div class="image-bg">
-                                                    <p class="desc">
-                                                        My Resume
-                                                    </p>
-                                                </div>
+            <!-- WORK -->
+            <section id="work" class="gray-bg mar-tm-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3 class="title-smail">
+                                <span>Work</span>
+                            </h3>
+                            <p class="content-detail">
+                                Ut wisi enim ad minim veniam, quis nostrud
+                                exerci tation ullamcorper suscipit lobortis
+                                nisl ut aliquip ex ea commodo consequat.
+                                <br />
+                                <br />
+                                Duis autem vel eum iriure dolor in hendrerit
+                                in vulputate velit esse molestie consequat,
+                                vel illum dolore eu feugiat nulla facilisis
+                                at vero eros.
+                            </p>
+                        </div>
+                        <div class="col-md-9 content-right">
+                            <ul class="portfolio-image">
+                                <li class="col-md-6">
+                                    <a href="">
+                                        <img src="./images/bw-1.png" alt="" />
+                                        <div class="decription-wrap">
+                                            <div class="image-bg">
+                                                <p class="desc">
+                                                    My Resume
+                                                </p>
                                             </div>
-                                        </a>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="col-md-6">
+                                    <a href="">
+                                        <img src="./images/bw-2.png" alt="" />
+                                        <div class="decription-wrap">
+                                            <div class="image-bg">
+                                                <p class="desc">
+                                                    My Resume
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="col-md-6">
+                                    <a href="">
+                                        <img src="./images/bw-3.png" alt="" />
+                                        <div class="decription-wrap">
+                                            <div class="image-bg">
+                                                <p class="desc">
+                                                    My Resume
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="col-md-6">
+                                    <a href="">
+                                        <img src="./images/bw-4.png" alt="" />
+                                        <div class="decription-wrap">
+                                            <div class="image-bg">
+                                                <p class="desc">
+                                                    My Resume
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="col-md-6">
+                                    <a href="">
+                                        <img src="./images/bw-5.png" alt="" />
+                                        <div class="decription-wrap">
+                                            <div class="image-bg">
+                                                <p class="desc">
+                                                    My Resume
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="col-md-6">
+                                    <a href="">
+                                        <img src="./images/bw-6.png" alt="" />
+                                        <div class="decription-wrap">
+                                            <div class="image-bg">
+                                                <p class="desc">
+                                                    My Resume
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- WORK END -->
+
+            <!-- SERVICES -->
+            <section id="services" class="white-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3 class="title-small">
+                                <span>Services</span>
+                            </h3>
+                            <p class="content-detail">
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit, sed diam nonummy nibh
+                                euismod tincidunt ut laoreet dolore magna
+                                aliquam erat volutpat.
+                            </p>
+                        </div>
+                        <div class="col-md-9 content-right">
+                            <div class="row">
+                                <ul class="listing-item">
+                                    <li>
+                                        <div class="col-md-4 col-sm-4">
+                                            <h3 class="icon-use">c</h3>
+                                            <p class="head-sm">MARKETING</p>
+                                            <p class="text-grey">
+                                                Typi non habent claritatem
+                                                insitam est usus legentis in
+                                                iis qui facit eorum
+                                                claritatem.
+                                            </p>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <img
-                                                src="./images/bw-2.png"
-                                                alt=""
-                                            />
-                                            <div class="mask-wrap">
-                                                <div class="image-bg">
-                                                    <p class="desc">
-                                                        My Resume
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
+                                        <div class="col-md-4 col-sm-4">
+                                            <h3 class="icon-use">c</h3>
+                                            <p class="head-sm">
+                                                WEB DESIGN
+                                            </p>
+                                            <p class="text-grey">
+                                                Typi non habent claritatem
+                                                insitam est usus legentis in
+                                                iis qui facit eorum
+                                                claritatem.
+                                            </p>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <img
-                                                src="./images/bw-3.png"
-                                                alt=""
-                                            />
-                                            <div class="mask-wrap">
-                                                <div class="image-bg">
-                                                    <p class="desc">
-                                                        My Resume
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
+                                        <div class="col-md-4 col-sm-4">
+                                            <h3 class="icon-use">c</h3>
+                                            <p class="head-sm">UI</p>
+                                            <p class="text-grey">
+                                                Typi non habent claritatem
+                                                insitam est usus legentis in
+                                                iis qui facit eorum
+                                                claritatem.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="listing-item">
+                                    <li>
+                                        <div class="fl col-md-4 xb-services">
+                                            <h3 class="icon-use">c</h3>
+                                            <p class="head-sm">DIRECTOR</p>
+                                            <p class="text-grey">
+                                                Typi non habent claritatem
+                                                insitam est usus legentis in
+                                                iis qui facit eorum
+                                                claritatem.
+                                            </p>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <img
-                                                src="./images/bw-4.png"
-                                                alt=""
-                                            />
-                                            <div class="mask-wrap">
-                                                <div class="image-bg">
-                                                    <p class="desc">
-                                                        My Resume
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
+                                        <div class="fl col-md-4 xb-services">
+                                            <h3 class="icon-use">c</h3>
+                                            <p class="head-sm">UX DESIGN</p>
+                                            <p class="text-grey">
+                                                Typi non habent claritatem
+                                                insitam est usus legentis in
+                                                iis qui facit eorum
+                                                claritatem.
+                                            </p>
+                                        </div>
                                     </li>
                                     <li>
-                                        <a href="">
-                                            <img
-                                                src="./images/bw-5.png"
-                                                alt=""
-                                            />
-                                            <div class="mask-wrap">
-                                                <div class="image-bg">
-                                                    <p class="desc">
-                                                        My Resume
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <img
-                                                src="./images/bw-6.png"
-                                                alt=""
-                                            />
-                                            <div class="mask-wrap">
-                                                <div class="image-bg">
-                                                    <p class="desc">
-                                                        My Resume
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
+                                        <div class="fl col-md-4 xb-services">
+                                            <h3 class="icon-use">c</h3>
+                                            <p class="head-sm">FRONT END</p>
+                                            <p class="text-grey">
+                                                Typi non habent claritatem
+                                                insitam est usus legentis in
+                                                iis qui facit eorum
+                                                claritatem.
+                                            </p>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
+            <!-- SERVICES END -->
 
-                <div id="services" class="white-bg">
-                    <div class="container">
-                        <div class="row">
-                            <div class="fl col-md-3">
-                                <h3 class="title-smail">
-                                    <span>Services</span>
-                                </h3>
-                                <p class="content-detail">
-                                    Lorem ipsum dolor sit amet, consectetuer
-                                    adipiscing elit, sed diam nonummy nibh
-                                    euismod tincidunt ut laoreet dolore magna
-                                    aliquam erat volutpat.
-                                </p>
+            <!-- EMPLOYEMENT -->
+            <section id="employement" class="grey-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3 class="title-small">
+                                <span>Employement</span>
+                            </h3>
+                            <p class="content-detail">
+                                Lorem ipsum dolor sit amet, consectetuer
+                                adipiscing elit, sed diam nonummy nibh
+                                euismod tincidunt ut laoreet dolore magna
+                                aliquam erat volutpat.
+                            </p>
+                        </div>
+                        <div class="col-md-9 content-right">
+                            <div class="row">
+                                <ul class="listing-item">
+                                    <li>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="wrap-card">
+                                                <div class="card">
+                                                    <h2 class="year">
+                                                        2007 - 2009
+                                                    </h2>
+                                                    <p class="job">
+                                                        web designer
+                                                    </p>
+                                                    <p class="company">
+                                                        Corp Project
+                                                    </p>
+                                                    <hr>
+                                                    <div class="text-detail">
+                                                        <p>
+                                                            Claritas est etiam processus dynamicus, qui sequitur
+                                                            mutationem consuetudium lectorum. Mirum est notare quam
+                                                            littera
+                                                            gothica, quam nunc putamus parum claram, anteposuerit
+                                                            litterarum formas humanita per seacula quarta decima et
+                                                            quinta
+                                                            decima. Eodem modo typi, qui nunc nobis videntur parum
+                                                            clari, fiant sollemnes.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="wrap-card">
+                                                <div class="card">
+                                                    <h2 class="year">
+                                                        2010 - 2014
+                                                    </h2>
+                                                    <p class="job">
+                                                        web designer
+                                                    </p>
+                                                    <p class="company">
+                                                        Corp Project
+                                                    </p>
+                                                    <hr>
+                                                    <div class="text-detail">
+                                                        <p>
+                                                            Claritas est etiam processus dynamicus, qui sequitur
+                                                            mutationem consuetudium lectorum. Mirum est notare quam
+                                                            littera
+                                                            gothica, quam nunc putamus parum claram, anteposuerit
+                                                            litterarum formas humanita per seacula quarta decima et
+                                                            quinta
+                                                            decima. Eodem modo typi, qui nunc nobis videntur parum
+                                                            clari, fiant sollemnes.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                             </div>
-                            <div class="fr col-md-7 content-right">
-                                <div class="row">
-                                    <ul class="listing-item">
-                                        <li>
-                                            <div
-                                                class="fl col-md-4 xb-services"
-                                            >
-                                                <h3 class="icon-use">c</h3>
-                                                <p class="head-sm">MARKETING</p>
-                                                <p class="text-grey">
-                                                    Typi non habent claritatem
-                                                    insitam est usus legentis in
-                                                    iis qui facit eorum
-                                                    claritatem.
+                            </li>
+                            </ul>
+                            <ul class="listing-item">
+                                <li>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="wrap-card">
+                                            <div class="card">
+                                                <h2 class="year">
+                                                    2014 - 2018
+                                                </h2>
+                                                <p class="job">
+                                                    web designer
                                                 </p>
+                                                <p class="company">
+                                                    Corp Project
+                                                </p>
+                                                <hr>
+                                                <div class="text-detail">
+                                                    <p>
+                                                        Claritas est etiam processus dynamicus, qui sequitur mutationem
+                                                        consuetudium lectorum. Mirum est
+                                                        notare quam littera
+                                                        gothica, quam nunc putamus parum claram, anteposuerit litterarum
+                                                        formas humanita per seacula
+                                                        quarta decima et quinta
+                                                        decima. Eodem modo typi, qui nunc nobis videntur parum clari,
+                                                        fiant sollemnes.
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="fl col-md-4 xb-services">
-                                                <h3 class="icon-use">c</h3>
-                                                <p class="head-sm">
-                                                    WEB DESIGN
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="wrap-card">
+                                            <div class="card">
+                                                <h2 class="year">
+                                                    2018 - 2022
+                                                </h2>
+                                                <p class="job">
+                                                    web designer
                                                 </p>
-                                                <p class="text-grey">
-                                                    Typi non habent claritatem
-                                                    insitam est usus legentis in
-                                                    iis qui facit eorum
-                                                    claritatem.
+                                                <p class="company">
+                                                    Corp Project
                                                 </p>
+                                                <hr>
+                                                <div class="text-detail">
+                                                    <p>
+                                                        Claritas est etiam processus dynamicus, qui sequitur mutationem
+                                                        consuetudium lectorum. Mirum est
+                                                        notare quam littera
+                                                        gothica, quam nunc putamus parum claram, anteposuerit litterarum
+                                                        formas humanita per seacula
+                                                        quarta decima et quinta
+                                                        decima. Eodem modo typi, qui nunc nobis videntur parum clari,
+                                                        fiant sollemnes.
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="fl col-md-4 xb-services">
-                                                <h3 class="icon-use">c</h3>
-                                                <p class="head-sm">UI</p>
-                                                <p class="text-grey">
-                                                    Typi non habent claritatem
-                                                    insitam est usus legentis in
-                                                    iis qui facit eorum
-                                                    claritatem.
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="fl col-md-4 xb-services"
-                                            >
-                                                <h3 class="icon-use">c</h3>
-                                                <p class="head-sm">DIRECTOR</p>
-                                                <p class="text-grey">
-                                                    Typi non habent claritatem
-                                                    insitam est usus legentis in
-                                                    iis qui facit eorum
-                                                    claritatem.
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="fl col-md-4 xb-services"
-                                            >
-                                                <h3 class="icon-use">c</h3>
-                                                <p class="head-sm">UX DESIGN</p>
-                                                <p class="text-grey">
-                                                    Typi non habent claritatem
-                                                    insitam est usus legentis in
-                                                    iis qui facit eorum
-                                                    claritatem.
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div
-                                                class="fl col-md-4 xb-services"
-                                            >
-                                                <h3 class="icon-use">c</h3>
-                                                <p class="head-sm">FRONT END</p>
-                                                <p class="text-grey">
-                                                    Typi non habent claritatem
-                                                    insitam est usus legentis in
-                                                    iis qui facit eorum
-                                                    claritatem.
-                                                </p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- EMPLOYEMENT  END-->
+
+            <!-- SKILLS -->
+            <div id="skill" class="white-bg">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="title-small">
+                            <span>Services</span>
+                        </h3>
+                        <p class="content-detail">
+                            Lorem ipsum dolor sit amet, consectetuer
+                            adipiscing elit, sed diam nonummy nibh
+                            euismod tincidunt ut laoreet dolore magna
+                            aliquam erat volutpat.
+                        </p>
+                    </div>
+                    <div class="col-md-9 content-right">
+                        <!-- SKILLSET -->
+                        <div class="skillst">
+                            <div class="skillbar" data-parcent="78%">
+                                <div class="title head-sm">
+                                    HTML5
+                                </div>
+                                <div class="count-bar" style="width: 78%;">
+                                    <div class="count">
+                                        <span>78%</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="skillbar" data-parcent="100%">
+                                <div class="title head-sm">
+                                    CSS3
+                                </div>
+                                <div class="count-bar" style="width: 100%;">
+                                    <div class="count">
+                                        <span>100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skillbar" data-parcent="80%">
+                                <div class="title head-sm">
+                                    PHP
+                                </div>
+                                <div class="count-bar" style="width: 80%;">
+                                    <div class="count">
+                                        <span>80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skillbar" data-parcent="96%">
+                                <div class="title head-sm">
+                                    VUE
+                                </div>
+                                <div class="count-bar" style="width: 96%;">
+                                    <div class="count">
+                                        <span>96%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skillbar" data-parcent="99%">
+                                <div class="title head-sm">
+                                    JAVASCRIPT
+                                </div>
+                                <div class="count-bar" style="width: 99%;">
+                                    <div class="count">
+                                        <span>99%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SKILLSET END -->
+                    </div>
+                </div>
+            </div>
+            <!-- SKILLS END -->
+
+            <!-- TESTIMONIAL -->
+            <div id="testimonial">
+                <div class="container">
+                    <div class="row wrap-testimonial">
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="owl-carousel owl-them" style="opacity: 1;display:block;">
+                                <div class="owl-wrapper-outer">
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- TESTIMONIAL END -->
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
