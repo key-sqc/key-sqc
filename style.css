@@ -109,7 +109,6 @@ header {
     float: right;
     background: #2f2f2f;
     padding: 2.5em 1.5em 0;
-    /* transform: translate3d(300px,0,0);  */
      transition: transform 0.4s;
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
@@ -135,6 +134,7 @@ header {
 .menu-list a:nth-child(.active) {
     transform: translate3d(0,1000px,0);
 }
+
 .menu-list a:hover,
 .menu-list a.active span {
     color: #fff !important;
@@ -158,17 +158,56 @@ header {
 
 .menu-list a.active span::before {
     width: 100%;
+    animation: myWidth 0.5s;
+    -webkit-animation: myWidth 0.5s;
 }
 
-.menu-list a span::before {
+.menu-list a.active span::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 0px;
     height: 2px;
     background-color: #fff;
     transform: translate(0,-50%);
     z-index: -1;
+}
+
+/* 动画 */
+@keyframes myfirst {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+@-webkit-keyframes myfirst {
+   from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes myWidth {
+   from {
+       width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes myWidth {
+   from {
+       width: 0%;
+}
+to {
+    width: 100%;
+    }
 }
 
 .close-button {
@@ -183,6 +222,7 @@ header {
     border: none;
     background-color: transparent;
     color: transparent;
+    outline: none;
 }
 /* 图标 */
 .close-button::before,
@@ -217,6 +257,7 @@ header {
     cursor: pointer;
     background: transparent;
     border: none;
+    outline: none;
 }
 
 .menu-button span {
@@ -268,7 +309,7 @@ header {
 }
 
 #home {
-    background: url('./images/bg.jpg') no-repeat;
+    background: url('./images/bg.png') no-repeat;
     background-size: cover;
     min-width: 100%;
     min-height: 100%;
@@ -305,7 +346,7 @@ header {
 
 #home .typed {
     font-weight: 400;
-    font-style: 16px;
+    font-size: 16px;
     line-height: 26px;
     letter-spacing: 1.6px;
     margin: 0 auto;
@@ -425,32 +466,20 @@ header {
     transform: translate(-50%,-50%);
 }
 
-.wrap-about .head-about {
-    font-size: 14px;
-    line-height: 34px;
-    letter-spacing: 0.5px;
-    font-weight: 300;
+.wrap-about .w-content tr {
+    height: 45px;
 }
 
-.wrap-about .name {
-    margin: 40px 0 20px 0;
-    font-size: 14px;
-}
-
-.warp-about .w-content tr {
-    height: 35px;
-}
-
-.warp-about .w-content td {
+.wrap-about .w-content td {
     font-size: 13px;
     font-weight: 300;
 }
 
-.warp-about .w-content td.break {
+.wrap-about .w-content td.break {
     padding-right: 15px;
 }
 
-.warp-about .w-content td.title {
+.wrap-about .w-content td.title {
     padding-right: 10px;
     font-weight: 500;
 }
@@ -650,7 +679,7 @@ ul.portfolio-image li:hover .decription-wrap {
     margin-top: 70px;
     line-height: 30px;
     font-size: 14px;
-    letter-spacing: 0.4px;
+    letter-spacing: 1px;
 }
 
 @media screen and (min-width: 1024px){
@@ -810,7 +839,6 @@ hr {
 
 
 /* skillset */
-
 .skillst {
     margin-top: 30px;
 }
@@ -832,12 +860,6 @@ hr {
     padding-left: 10px;
     font-size: 12px !important;
 }
-
-/* .skillst .count-bar {
-    background-color: #818181;
-    height: 5px;
-    position: relative;
-} */
 
 .skillst .count-bar {background-color: #818181;}
 
@@ -934,11 +956,11 @@ hr {
 		min-height: 400px !important;
 	}
 	.wrap-about .w-content{
-		left: 0;
-    right: 0;
+	left: 0;
+    right: 0
     width: 50%;
     top: 0;
-    padding: 30px 0;
+    padding: 30px 80px;
     transform: none;
 	}
 
