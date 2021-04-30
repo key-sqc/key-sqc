@@ -2,7 +2,6 @@
 $(function () {
 	// 显示列表页
 	$('#menu-button').click(function () {
-		// $($(this).siblings('.menu-wrap')[0]).fadeIn('slow');
 		$('.menu-wrap').fadeIn('slow');
 	});
 	// 取消列表页
@@ -78,24 +77,43 @@ $(function () {
 				width: '0%'
 			}).animate({
 				width: '100%'
-			},3000);
+			}, 3000);
 			$('.skillst>.skillbar').eq(2).find('.count-bar').animate({
 				width: '0%'
 			}).animate({
 				width: '88%'
-			},3000);
+			}, 3000);
 			$('.skillst>.skillbar').eq(3).find('.count-bar').animate({
 				width: '0%'
 			}).animate({
 				width: '96%'
-			},3000);
+			}, 3000);
 			$('.skillst>.skillbar').eq(4).find('.count-bar').animate({
 				width: '0%'
 			}).animate({
 				width: '99%'
-			},3000);
+			}, 3000);
 
 			$(window).off('scroll', to);
 		}
 	}
+
+
+	// home模块文字打字机展示
+	let text = '大家好，我是M.宋';
+
+	myText('typed', text);
+	function myText(end, str) {
+		let counter = 0;
+		let endDom = document.querySelector(`#${end}`);
+
+		let timer1 = setInterval(() => {
+			endDom.innerHTML = str.substring(0, counter++);
+			if (str === endDom.innerHTML) {
+				clearInterval(timer1);
+			}
+		}, 200);
+
+	}
+
 });
