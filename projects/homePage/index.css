@@ -17,15 +17,18 @@ body {
 
 .bg img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 /* 搜索 */
 .search {
 	position: absolute;
 	z-index: 999;
-	left: 100px;
-	top: 60px;
+	left: 8%;
+	top: 12%;
 	width: 400px;
+	height: 200px;
 }
 
 .search #search_target {
