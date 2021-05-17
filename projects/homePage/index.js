@@ -1,6 +1,5 @@
 window.onload = function () {
 	//  搜索的问题
-
 	(() => {
 		let search = document.querySelector('#search_target');
 
@@ -16,14 +15,9 @@ window.onload = function () {
 
 				// 清除输入框
 				search.value = ' ';
-
-				//  取消事件
-				document.removeEventListener('keydown', keydown);
 			}
 		}
-
 	})();
-
 
 	// 图标加载
 	(() => {
