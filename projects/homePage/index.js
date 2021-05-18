@@ -21,7 +21,7 @@ window.onload = function () {
 
 	// 图标加载
 	(() => {
-		let icos = document.querySelectorAll('nav>ul>li');
+		let icos = document.querySelectorAll('nav ul li');
 
 		icos.forEach(value => {
 			let Dom = value.children;

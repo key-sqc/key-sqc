@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="index.css">
 	<script src="./index.js"></script>
 </head>
@@ -17,45 +19,56 @@
 		<img src="./images/bg.jpg" alt="我是背景">
 	</article>
 
-	<!-- 搜索的添加 -->
-	<article class="search">
-		<div class="location">
-			<label for="search_target"></label>
-			<input type="text" id="search_target" autofocus placeholder="search">
-		</div>
-	</article>
+	<div class="container">
+		<!-- 搜索的添加 -->
+		<div class="row">
+			<div class="search col-xs-12 col-sm-12 col-md-6">
+				<div class="location">
+					<label for="search_target"></label>
+					<input type="text" id="search_target" autofocus placeholder="search">
+				</div>
+			</div>
 
-	<!-- 快捷方式的添加 -->
-	<article class="icos">
-		<nav>
-			<ul>
-				<li>
-					<a href="https://www.runoob.com/"><span>菜鸟教程</span></a>
-				</li>
-				<li>
-					<a href="https://github.com/"><span>我的github</span></a>
-				</li>
-				<li>
-					<a href="https://chestnutball.github.io"><span>我的网站</span></a>
-				</li>
-				<li>
-					<a href="https://fanyi.baidu.com/"><span>翻译</span></a>
-				</li>
-				<li>
-					<a href="https://www.google.com/"><span>谷歌搜索</span></a>
-				</li>
-				<li>
-					<a href="https://www.wikipedia.org/"><span>维基百科</span></a>
-				</li>
-				<li>
-					<a href="https://zh.wikipedia.org/wiki"><span>维基百科</span></a>
-				</li>
-				<li>
-					<a href="https://mail.qq.com/"><span>qq邮箱</span></a>
-				</li>
-			</ul>
-		</nav>
-	</article>
+			<!-- 快捷方式的添加 -->
+			<div class="icos col-xs-12 col-sm-12 col-md-6">
+				<nav class="container">
+					<div class="row padBut30">
+						<ul class="col-xs-12 col-sm-12 col-md-12">
+							<li class="col-xs-6 col-sm-3 col-md-3">
+								<a href="https://www.runoob.com/"><span>菜鸟教程</span></a>
+							</li>
+							<li class="col-xs-6 col-sm-3 col-md-3">
+								<a href="https://github.com/"><span>我的github</span></a>
+							</li>
+							<li class="col-xs-6 col-sm-3 col-md-3">
+								<a href="https://chestnutball.github.io"><span>我的网站</span></a>
+							</li>
+							<li class="col-xs-6 col-sm-3 col-md-3">
+								<a href="https://fanyi.baidu.com/"><span>翻译</span></a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="row padBut30">
+						<ul class="col-xs-12 col-sm-12 col-md-12">
+							<li class="col-xs-6 col-sm-3 col-md-3">
+								<a href="https://www.google.com/"><span>谷歌搜索</span></a>
+							</li>
+							<li class="col-xs-6 col-sm-3 col-md-3">
+								<a href="https://www.wikipedia.org/"><span>维基百科</span></a>
+							</li>
+							<li class="col-xs-6 col-sm-3 col-md-3">
+								<a href="https://zh.wikipedia.org/wiki"><span>维基百科</span></a>
+							</li>
+							<li class="col-xs-6 col-sm-3 col-md-3">
+								<a href="https://mail.qq.com/"><span>qq邮箱</span></a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
 
 	<!-- 切换壁纸图标 -->
 	<article class="target">
