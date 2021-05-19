@@ -10,7 +10,6 @@ window.onload = function () {
 			if (e.keyCode === 13) {
 
 				//  搜索接口 http://www.baidu.com/s?wd=关键字
-
 				window.open(`http://www.baidu.com/s?wd=${search.value}`);
 
 				// 清除输入框
@@ -36,6 +35,68 @@ window.onload = function () {
 		});
 	})();
 
+	// 待办事项
+	(() => {
+		let btn = document.querySelectorAll('button');
+		let dom = document.querySelector('.daiban');
+		let addP = dom.querySelector('.addP');
+
+		btn[0].addEventListener('click', addMatter);
+		document.addEventListener('keydown', function(e) {
+			if (e.keyCode === 68) {
+				addMatter();
+			}
+		});
+
+		function addMatter() {
+			var person = prompt("请输入你的事情呀~~");
+			if (person != null && person != "") {
+				let p = document.createElement('p');
+				// 添加数据的key
+				p.count = Math.random().toString().replace('.', '');
+
+				// 初始添加click初始类
+				p.classList.add('click');
+
+				// 添加数据
+				localStorage.setItem(p.count, person);
+
+				// 将localStorage 中的内容填充进p标签中
+				let getItem = localStorage.getItem(p.count);
+				p.innerHTML = getItem;
+
+				addP.appendChild(p);
+
+				let ps = dom.querySelectorAll('p');
+				addCount(ps);
+			}
+		};
+
+		// 此按钮只能添加一个全清除
+		btn[1].addEventListener('click', clearLocalSto);
+
+		function clearLocalSto() {
+			addP.innerHTML = ' ';
+			localStorage.clear();
+		}
+
+		function addCount(ps) {
+			for (let i = 0; i < ps.length; i++) {
+				ps[i].target = false;
+				ps[i].onclick = function () {
+					if (!this.target) {
+						// 删除
+						localStorage.removeItem(this.count);
+						this.classList.remove('click');
+						this.classList.add('remove');
+						this.target = true;
+					} else {
+						this.target = false;
+					}
+				};
+			}
+		}
+	})();
 
 	// 切换二次元壁纸
 	(() => {
@@ -45,6 +106,4 @@ window.onload = function () {
 			return false;
 		};
 	})();
-
-
 };

@@ -6,19 +6,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<!-- inified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="index.css">
 	<script src="./index.js"></script>
 </head>
 
 <body>
-	<!-- https://www.qqlykm.cn/api/ACG/api.php -->
+	<!-- 背景图像 -->
 	<article class="bg">
-		<img src="./images/bg.jpg" alt="我是背景">
+		<img src="./images/bg.jpg" alt="我是背景" class="img-responsive">
 	</article>
 
+	<!-- 上层布局 -->
 	<div class="container">
 		<!-- 搜索的添加 -->
 		<div class="row">
@@ -64,6 +65,22 @@
 					</div>
 				</nav>
 			</div>
+		</div>
+	</div>
+
+	<!-- 待办事项 -->
+	<div class="container hidden-xs">
+		<div class="row">
+			<article class="daiban col-xs-12 col-sm-12 col-md-6">
+				<div class="btn">
+					<button class="addBtn">+</button>
+					<button class="remBtn">-</button>
+				</div>
+
+				<div class="addP">
+
+				</div>
+			</article>
 		</div>
 	</div>
 
