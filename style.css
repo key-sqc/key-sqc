@@ -309,7 +309,7 @@ to {
 }
 
 #home {
-    background: url('./images/bg.png') no-repeat;
+    background: url('./images/bg.jpg') no-repeat;
     background-size: cover;
     min-width: 100%;
     min-height: 100%;
@@ -593,7 +593,6 @@ ul.portfolio-image {
 }
 
 ul.portfolio-image li {
-    float: left;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -609,6 +608,7 @@ ul.portfolio-image li img {
     -webkit-filter: grayscale(100%);
     transition: filter,transform,0.5s;
 }
+
 ul.portfolio-image li .decription-wrap {
     position: absolute;
     width: 100%;
@@ -664,9 +664,9 @@ ul.portfolio-image li:hover img {
     transform: scale(1.25);
 }
 
-ul.portfolio-image li:hover .image-bg {opacity: 1;}
+ul.portfolio-image li:hover .image-bg {opacity: 0.8;}
 ul.portfolio-image li:hover .decription-wrap {
-    background: rgba(186,186,186,0.6);
+    background: rgba(186,186,186,0.8);
 }
 
 .white-bg {
