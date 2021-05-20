@@ -146,7 +146,7 @@ a {
 .daiban p.remove::before {
 	content: "";
 	position: absolute;
-	left: -8%;
+	left: -6%;
 	top: 6%;
 	width: 20px;
 	height: 20px;
