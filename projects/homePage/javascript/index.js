@@ -42,11 +42,13 @@ window.onload = function () {
 		let addP = dom.querySelector('.addP');
 
 		btn[0].addEventListener('click', addMatter);
-		document.addEventListener('keydown', function(e) {
-			if (e.keyCode === 68) {
-				addMatter();
-			}
-		});
+
+		// 点击D按键添加待办事项的功能
+		// document.addEventListener('keydown', function(e) {
+		// 	if (e.keyCode === 68) {
+		// 		addMatter();
+		// 	}
+		// });
 
 		function addMatter() {
 			var person = prompt("请输入你的事情呀~~");
